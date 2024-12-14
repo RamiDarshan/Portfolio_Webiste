@@ -1,0 +1,161 @@
+@media screen and (max-width: 1200px) {
+    .hero-section .hero-second h1 {
+        font-size: 90px;
+        margin-top: 10px;
+    }
+
+    .hero-section .hero-second h1:nth-child(1) {
+        font-size: 90px;
+    }
+
+    .hero-section .hero-first .img1 {
+        height: 650px;
+        width: 800px;
+        left: -350px;
+        top: 30px;
+    }
+
+    .all-cards .one .box1 {
+        height: 250px;
+        width: 250px;
+    }
+
+    .all-cards .one .box1 h1 {
+        font-size: 20px;
+    }
+
+    /* Project section */
+    .project-sliders .card {
+        flex: 0 0 400px;
+    }
+
+    .project-sliders .slider-track {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-section {
+        height: 2000px;
+    }
+
+    .footer-section .social-links {
+        margin-bottom: 30px;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .hero-section .hero-second h1 {
+        font-size: 70px;
+    }
+    .navbar-container .navbar-logo-tag h1 {
+        font-size: 25px;
+    }
+    .hero-section .hero-second h1:nth-child(1) {
+        font-size: 70px;
+    }
+
+    .hero-section .hero-first .img1 {
+        height: 550px;
+        width: 700px;
+        left: -300px;
+        top: 50px;
+    }
+
+    .hero-section {
+        margin: 30px;
+    }
+
+    .hero-section .hero-first .img2 {
+        left: -10px;
+        height: 70px;
+        width: 90px;
+    }
+
+    .hero-section .hero-second {
+        margin: 130px 0 0 0;
+    }
+
+    .msj-section .msj-form {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .hero-section .hero-second h1 {
+        font-size: 60px;
+    }
+
+    .hero-section .hero-second h1:nth-child(1) {
+        font-size: 60px;
+    }
+
+    .hero-section .hero-first .img1 {
+        height: 370px;
+        width: 460px;
+        left: -180px;
+        top: -0px;
+    }
+
+    .hero-section {
+        margin: 130px 0 0 0;
+    }
+
+    .hero-section .hero-first .img2 {
+        left: -10px;
+        height: 70px;
+        width: 90px;
+    }
+
+    .hero-section .hero-second {
+        margin: 0 0;
+    }
+
+    /* skills */
+    .all-cards .one .box1 img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .all-cards .one .box1 {
+        height: 150px;
+        width: 150px;
+    }
+
+    .all-cards .one .box1 h1 {
+        font-size: 14px;
+    }
+
+    /* about */
+    .about-section .about-div .content h4 {
+        font-size: 13px;
+    }
+
+    .about-section .about-div .content {
+        width: 90%;
+    }
+
+    /* footer */
+    .footer-section .title h3 {
+        font-size: 20px;
+    }
+
+    .footer-section .title h1 {
+        font-size: 30px;
+    }
+
+    .msj-section .msj-form form {
+        width: 50%;
+        padding: 10px 0px 10px 20px;
+    }
+
+    .msj-section .msj-form .form2 {
+        width: 50%;
+        padding: 10px;
+    }
+
+    .footer-section {
+        padding-bottom: 20px;
+    }
+}
