@@ -6,14 +6,34 @@
     scroll-behavior: smooth;
 }
 
+html,
 body {
-    background: #00111C;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     overflow-x: hidden;
+}
+
+body {
+	background: linear-gradient(-45deg, #00111C, #03001c, #000e1c);
+	animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 /* Navbar */
 .navbar-container {
-    width: 100%;
+    width: 100px;
     height: 60px;
     display: flex;
     padding: 20px 100px 60px 100px;
@@ -23,7 +43,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 999;
-    background: linear-gradient(rgba(0, 17, 28, 1) 0%, rgba(0, 17, 28, 0) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.562) 0%, rgba(0, 17, 28, 0) 100%);
 }
 
 .navbar-container .navbar-logo {
@@ -85,7 +105,7 @@ body {
     z-index: 999;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .navbar-links {
         overflow: hidden;
         opacity: 0;
@@ -98,14 +118,17 @@ body {
         height: 200px;
         transform: translateY(-20px);
     }
-    .navbar-links ul{
+
+    .navbar-links ul {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .navbar-container .navbar-links .btn {
         width: 20%;
     }
+
     .navbar-links.active {
         max-height: 500px;
         opacity: 1;
@@ -120,6 +143,7 @@ body {
     .menu-btn {
         display: block;
     }
+
     .navbar-links.active ul li {
         opacity: 1;
         transform: translateY(0);
@@ -147,17 +171,8 @@ body {
 .hero-section {
     display: flex;
     color: #00607A;
-    margin: 50px;
+    width: 100%;
 }
-
-.hero-section .blob {
-    position: absolute;
-    filter: blur(1000px);
-    top: -500px;
-    right: -100px;
-    z-index: -999;
-}
-
 .hero-section .hero-first {
     height: 100vh;
     width: 40%;
@@ -167,8 +182,8 @@ body {
     height: 810px;
     width: 1000px;
     position: relative;
-    left: -410px;
-    top: 30px;
+    left: -370px;
+    top: 100px;
     mask-image: linear-gradient(-30deg, transparent 25%, black 70%);
 }
 
@@ -301,84 +316,70 @@ body {
 
 /* Skills section */
 
-.all-cards {
+.skills-section {
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    /* height: 100vh; */
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.skills-section .title {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
+    min-height: 100vh;
 }
 
-.skills-section .title h2 {
-    color: #005f7acb;
-    font-family: normal;
-    font-size: 25px;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 30px;
+    width: 70%;
 }
 
-.skills-section .title h1 {
-    color: #00607A;
-    font-size: 30px;
-}
-
-.all-cards .one {
-    display: flex;
-    padding: 0 30px;
-    justify-content: center;
-}
-
-.all-cards .img {
-    position: relative;
-    height: 100px;
-    width: 130px;
-    bottom: 200px;
-    left: 1400px;
-    filter: opacity(30%);
-}
-
-.all-cards .one .box1 {
-    height: 300px;
-    width: 300px;
-    background-color: #ffffff22;
+.grid-item {
+    background-color: #ffffff3c;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 15px;
-    border: 3px solid #00607A;
+    aspect-ratio: 1 / 1;
     transition: .2s ease;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
 }
 
-.all-cards .one .box1:hover {
+.grid-item:hover {
     border: 4px solid #00c7fe;
     box-shadow: -1px -3px 28px 10px #005f7a6b;
-    ;
-
 }
 
-.all-cards .one .box1 img {
-    height: 100px;
-    width: 100px;
+.grid-item img {
     object-fit: contain;
+    height: 130px;
+    width: 130px;
 }
 
-.all-cards .one .box1 h1 {
+.grid-item h1 {
     color: #fff;
     font-size: 25px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 30px 0;
+    }
+
+    .grid-item {
+        min-width: 250;
+    }
+
+    .grid-item img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .grid-item h1 {
+        font-size: 20px;
+    }
 }
 
 /* Projects Section */
@@ -387,7 +388,6 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 100px 0;
 }
 
 .project-section .blob {
@@ -404,7 +404,7 @@ body {
     align-items: center;
     margin: 100px 0;
     color: #00607A;
-   
+
 }
 
 .project-section .title h2 {
@@ -444,9 +444,6 @@ body {
     overflow: hidden;
     position: relative;
     transition: .2s ease;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
 }
 
 .project-sliders .card img {
@@ -459,15 +456,18 @@ body {
     transition: .2s ease;
 
 }
-.project-sliders .card:hover img{
+
+.project-sliders .card:hover img {
     border: 3px solid #00607A;
     box-shadow: 0px 0px 10px 3px #005f7a94;
     transform: scale(1.1);
 }
+
 .project-sliders .card:hover {
     border: 3px solid #00607A;
     box-shadow: 0px 0px 10px 3px #005f7a94;
 }
+
 .project-sliders .card::after {
     content: '';
     position: absolute;
@@ -499,24 +499,23 @@ body {
 
 /* About section */
 .about-section {
-    height: 70vh;
+    height: 600px;
     width: 100%;
+    margin-top: 200px;
 }
 
 .about-section .about-div {
-    /* background: url("about.jpg"); */
     background-image:
-    linear-gradient(to bottom,#00111cc3 , rgba(0, 0, 0, 0.619)),
-    url('about.jpg');
+        linear-gradient(to bottom, #00111cf0, rgba(0, 0, 0, 0.619)),
+        url('about.jpg');
+background-repeat: no-repeat;
+background-size: cover;
     height: 300px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 60px;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
 }
 
 .about-section .about-div h1 {
@@ -539,11 +538,15 @@ body {
     margin: 10px;
 }
 
+
 /* Msj Section */
 .msj-section {
     width: 100%;
     height: 80vh;
+    display: flex;
+    flex-direction: column;
 }
+
 .msj-section .blob {
     filter: blur(1000px);
     position: absolute;
@@ -561,9 +564,6 @@ body {
     height: 70%;
     width: 80%;
     margin: auto;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
 }
 
 .msj-section .msj-form form {
@@ -590,6 +590,7 @@ body {
     margin: 10px;
     background-color: #ffffff25;
     color: #fff;
+    box-shadow: 0 0 300px 50px #005f7a42;
 }
 
 .msj-section .msj-form form input:focus {
@@ -611,8 +612,9 @@ textarea::placeholder {
     max-width: 100%;
     max-height: 185px;
     min-height: 185px;
-    ;
     color: #fff;
+    box-shadow: 0 0 300px 50px #005f7a42;
+
 }
 
 .msj-section .msj-form .form2 input {
@@ -640,26 +642,29 @@ textarea::placeholder {
 /* Footer Section */
 .footer-section {
     width: 100%;
-    height: 200px;
+    height: 250px;
     display: flex;
     flex-direction: column;
-    margin-bottom:30px;
 }
-.footer-section .title{
+
+.footer-section .title {
     width: 100%;
     height: 70%;
-    color:#00afe0b7;
+    color: #00afe0b7;
     text-align: center;
     margin-top: 60px;
 }
-.footer-section .title h3{
+
+.footer-section .title h3 {
     color: #00607A;
     font-size: 25px;
     font-weight: lighter;
 }
-.footer-section .title h1{
+
+.footer-section .title h1 {
     font-size: 40px;
 }
+
 .footer-section .social-links {
     width: 100%;
     height: 100px;
@@ -679,10 +684,12 @@ textarea::placeholder {
     transition: .2s ease;
     margin: 10px;
 }
-.footer-section .social-links .link i{
+
+.footer-section .social-links .link i {
     color: #00c7fe;
     font-size: 20px;
 }
+
 .footer-section .social-links a {
     text-decoration: none;
 }
@@ -691,19 +698,4 @@ textarea::placeholder {
     color: #00afe0b7;
     text-shadow: 0 0 10px #00607A;
     background-color: transparent;
-}
-@keyframes appear {
-    from {
-        opacity: 0;
-        scale: 0.5;
-        transform: translateX(-100x);
-        filter: blur(5px);
-    }
-
-    to {
-        opacity: 1;
-        scale: 1;
-        transform: translateX(0x);
-        filter: blur(0px);
-    }
 }
