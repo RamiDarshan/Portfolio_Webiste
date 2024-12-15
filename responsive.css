@@ -1,3 +1,5 @@
+/* Responsive File */
+
 @media (max-width: 1200px) {
     .hero-section .hero-second h1 {
         font-size: 90px;
