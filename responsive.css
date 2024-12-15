@@ -1,5 +1,4 @@
 /* Responsive File */
-
 @media (max-width: 1200px) {
     .hero-section .hero-second h1 {
         font-size: 90px;
@@ -200,7 +199,7 @@
         height: 650px;
         width: 800px;
         left: -300px;
-        top: 100px;
+        top: 60px;
         mask-image: linear-gradient(-30deg, transparent 25%, black 100%);
     }
 
