@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
     .hero-section .hero-second h1 {
         font-size: 90px;
         margin-top: 10px;
@@ -12,7 +12,7 @@
         height: 650px;
         width: 800px;
         left: -350px;
-        top: 30px;
+        top: 100px;
     }
 
     .all-cards .one .box1 {
@@ -44,13 +44,15 @@
 }
 
 
-@media screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
     .hero-section .hero-second h1 {
         font-size: 70px;
     }
+
     .navbar-container .navbar-logo-tag h1 {
         font-size: 25px;
     }
+
     .hero-section .hero-second h1:nth-child(1) {
         font-size: 70px;
     }
@@ -59,11 +61,7 @@
         height: 550px;
         width: 700px;
         left: -300px;
-        top: 50px;
-    }
-
-    .hero-section {
-        margin: 30px;
+        top: 100px;
     }
 
     .hero-section .hero-first .img2 {
@@ -82,7 +80,13 @@
 
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 20px 50px 60px 50px;
+    }
+    .navbar-container .navbar-links .btn {
+        width: 30%;
+    }
     .hero-section .hero-second h1 {
         font-size: 60px;
     }
@@ -126,7 +130,10 @@
     .all-cards .one .box1 h1 {
         font-size: 14px;
     }
-
+    .project-sliders .card {
+        flex: 0 0 350px;
+        width: 250px;
+    }
     /* about */
     .about-section .about-div .content h4 {
         font-size: 13px;
@@ -158,4 +165,108 @@
     .footer-section {
         padding-bottom: 20px;
     }
+}
+
+@media (max-width: 550px) {
+    .hero-section {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .hero-section .hero-second {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-section .hero-second {
+        height: 70vh;
+        z-index: 999;
+        margin-top: 100px;
+    }
+
+    .hero-section .social-links {
+        display: none;
+    }
+
+    .hero-section .hero-first {
+        height: 50vh;
+    }
+
+    .hero-section .hero-first .img1 {
+        height: 650px;
+        width: 800px;
+        left: -300px;
+        top: 100px;
+        mask-image: linear-gradient(-30deg, transparent 25%, black 100%);
+    }
+
+    .hero-section .hero-second h1:nth-child(1) {
+        color: #005f7a;
+    }
+
+    .hero-section .hero-second .obj {
+        top: -10px;
+        right: -25px;
+    }
+
+    /* skills section */
+    .grid-item img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .grid-item h1 {
+        color: #fff;
+        font-size: 15px;
+    }
+
+    /* Project section */
+    .project-section {
+        margin: 0;
+    }
+
+    .about-section .img {
+        height: 60px;
+        width: 80px;
+    }
+
+    .msj-section {
+        margin-bottom: 100px;
+    }
+
+    .msj-section .msj-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .msj-section .msj-form form input {
+        width: 80%;
+    }
+
+    .msj-section .msj-form form {
+        width: 100%;
+        margin: 0 20px;
+        padding: 0;
+    }
+
+    .msj-section .msj-form .form2 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .msj-section .msj-form .form2 textarea {
+        width: 80%;
+    }
+
+    .msj-section .msj-form .form2 input {
+        width: 40%;
+        margin-left: 10px;
+    }
+
+    .all-cards .one {
+        flex-direction: column;
+    }
+
 }
