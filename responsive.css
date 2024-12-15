@@ -184,7 +184,7 @@
     .hero-section .hero-second {
         height: 70vh;
         z-index: 999;
-        margin-top: 100px;
+        margin-top: -50px;
     }
 
     .hero-section .social-links {
