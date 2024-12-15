@@ -15,20 +15,22 @@ body {
 }
 
 body {
-	background: linear-gradient(-45deg, #00111C, #03001c, #000e1c);
-	animation: gradient 5s ease infinite;
+    background: linear-gradient(-45deg, #050025, #00070c);
+    animation: gradient 2s ease infinite;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Navbar */
@@ -173,6 +175,7 @@ body {
     color: #00607A;
     width: 100%;
 }
+
 .hero-section .hero-first {
     height: 100vh;
     width: 40%;
@@ -320,11 +323,26 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin-bottom: 100px;
 }
-
+.skills-section .title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.skills-section .title h3{
+    color: #005f7a8c;
+    font-size: 30px;
+    font-family: normal;
+}
+.skills-section .title h1{
+    color: #00607A;
+    font-size: 40px;
+}
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -334,7 +352,7 @@ body {
 }
 
 .grid-item {
-    background-color: #ffffff3c;
+    background-color: #ffffff15;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -342,6 +360,7 @@ body {
     align-items: center;
     aspect-ratio: 1 / 1;
     transition: .2s ease;
+    border: 1px solid #00c7fe;
 }
 
 .grid-item:hover {
@@ -388,13 +407,6 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.project-section .blob {
-    filter: blur(1000px);
-    position: absolute;
-    transform: translate(1000px, -400px);
-    z-index: -999;
 }
 
 .project-section .title {
@@ -508,8 +520,8 @@ body {
     background-image:
         linear-gradient(to bottom, #00111cf0, rgba(0, 0, 0, 0.619)),
         url('about.jpg');
-background-repeat: no-repeat;
-background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 300px;
     width: 100%;
     display: flex;
@@ -545,13 +557,6 @@ background-size: cover;
     height: 80vh;
     display: flex;
     flex-direction: column;
-}
-
-.msj-section .blob {
-    filter: blur(1000px);
-    position: absolute;
-    transform: translate(-500px, -400px);
-    z-index: -999;
 }
 
 .msj-section h1 {
@@ -590,7 +595,7 @@ background-size: cover;
     margin: 10px;
     background-color: #ffffff25;
     color: #fff;
-    box-shadow: 0 0 300px 50px #005f7a42;
+    box-shadow: 0 0 300px 50px #005f7a19;
 }
 
 .msj-section .msj-form form input:focus {
@@ -613,7 +618,7 @@ textarea::placeholder {
     max-height: 185px;
     min-height: 185px;
     color: #fff;
-    box-shadow: 0 0 300px 50px #005f7a42;
+    box-shadow: 0 0 300px 50px #005f7a19;
 
 }
 
