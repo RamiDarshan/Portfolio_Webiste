@@ -359,7 +359,7 @@ body {
     justify-content: space-around;
     align-items: center;
     aspect-ratio: 1 / 1;
-    transition: .2s ease;
+    transition: .05s ease;
     border: 1px solid #00c7fe;
 }
 
